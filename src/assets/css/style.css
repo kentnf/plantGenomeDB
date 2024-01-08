@@ -1,0 +1,61 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+    margin: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.contentWraper {
+    width: 80vw;
+    margin: 0 auto;
+}
+
+/* define colors 
+- the primary color is for menu background, title, and button 
+- the secondary color is for background of drop-down list,  
+*/
+
+:root {
+    --primary-color: #825b2f; 
+    --secondary-color: #6c757d;
+    --accent-color: #ffc107;
+}
+
+
+
+
+
+p,
+h1,
+h2 {
+    margin: 0;
+}
+
+h3 {
+    font-size: 28px;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+h4 {
+    font-size: 22px;
+    color: #000;
+    font-weight: 600;
+}
+
+.panel-info {
+    border: 1px solid #bababa;
+    border-radius: 4px;
+    & .panel-heading {
+        color: #0b0b0b;
+        background-color: #bababa;
+        border-color: #bababa;
+    }
+}
+
+.submit-button {
+    background-color:var(--primary-color); 
+    border: none;
+}

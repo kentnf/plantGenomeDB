@@ -1,0 +1,30 @@
+{
+    "announcements": [
+      {
+        "description": "The Castanea Genome Database was restructured based on HortGenome Search Engine API.",
+        "date": "Dec. 2023"
+      },
+      {
+        "description": "The genomic data of three Chinese chestnut cultivars has been integrated into CGD.",
+        "date": "Jan. 2023"
+      },
+
+      {
+        "description": "The article of <a href='https://pubmed.ncbi.nlm.nih.gov/35401618/' target='_blank'>‘Beta-Amylase and Phosphatidic Acid Involved in Recalcitrant Seed Germination of Chinese Chestnut’</a> was published in Frontiers in plant science.",
+        "date": "Mar. 2022"
+      },
+      {
+        "description": "The Chinese chestnut cultivar ‘Jingshuhong’ has been authorized by Tree Variety Approval Committee of the National Forestry and Grassland Administration.",
+        "date": "Jan. 2022"
+      },
+      {
+        "description": "The genomic data of Chinese chestnut cultivar N11-1 is integrated into CGD.",
+        "date": "Sept. 2020"
+      },
+      {
+        "description": "The Castanea Genome Database (CGD) is up running.",
+        "date": "Aug. 2020"
+      }
+    ]
+}
+  
