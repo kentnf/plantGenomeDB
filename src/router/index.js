@@ -6,21 +6,11 @@ const routes = [{
     name: 'home',
     component: HomeView
 },{
-    path: '/Ssearch',
-    name: 'Ssearch',
-    component: () =>
-        import('../views/Ssearch.vue')
-},{
     // genomeInfo
     path: '/genomeInfo',
     name: 'genomeInfo',
     component: () =>
         import('../views/genomeInfo.vue')
-}, {
-    path: '/Genomes',
-    name: 'Genomes',
-    component: () =>
-        import('../views/Genomes.vue')
 }, {
     path: '/TranscriptionFactors',
     name: 'TranscriptionFactors',
@@ -51,16 +41,6 @@ const routes = [{
     name: 'news',
     component: () =>
         import('../views/news.vue')
-}, {
-    path: '/GenomeList',
-    name: 'GenomeList',
-    component: () =>
-        import('../views/GenomeList.vue')
-}, {
-    path: '/submit',
-    name: 'submit',
-    component: () =>
-        import('../views/submit.vue')
 }, {
     path: '/tools/batchquery',
     name: 'Batchq',

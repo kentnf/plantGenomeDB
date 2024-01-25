@@ -18,14 +18,10 @@ body {
 */
 
 :root {
-    --primary-color: #825b2f; 
+    --primary-color: #1b7f7d; 
     --secondary-color: #6c757d;
-    --accent-color: #ffc107;
+    --accent-color: #9eca83;
 }
-
-
-
-
 
 p,
 h1,
@@ -59,3 +55,9 @@ h4 {
     background-color:var(--primary-color); 
     border: none;
 }
+
+.prompt {
+    font-style: italic;
+    font-weight: bold;
+    color: #1a5dae;
+  }

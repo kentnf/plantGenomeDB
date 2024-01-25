@@ -1,30 +1,34 @@
 {
     "announcements": [
       {
-        "description": "The Castanea Genome Database was restructured based on HortGenome Search Engine API.",
-        "date": "Dec. 2023"
+        "description": "<span class=prompt>Add news through the public/news.json file.</span>",
+        "date": "Jan. 2024"
       },
       {
-        "description": "The genomic data of three Chinese chestnut cultivars has been integrated into CGD.",
-        "date": "Jan. 2023"
-      },
-
-      {
-        "description": "The article of <a href='https://pubmed.ncbi.nlm.nih.gov/35401618/' target='_blank'>‘Beta-Amylase and Phosphatidic Acid Involved in Recalcitrant Seed Germination of Chinese Chestnut’</a> was published in Frontiers in plant science.",
-        "date": "Mar. 2022"
+        "description": "An improved spinach genome and a spinach variome map described in Cai et al. (2021) have been released.",
+        "date": "Dec. 2021"
       },
       {
-        "description": "The Chinese chestnut cultivar ‘Jingshuhong’ has been authorized by Tree Variety Approval Committee of the National Forestry and Grassland Administration.",
-        "date": "Jan. 2022"
+        "description": "The SpinachBase manuscript published in DATABASE.",
+        "date": "Jun. 2019"
       },
       {
-        "description": "The genomic data of Chinese chestnut cultivar N11-1 is integrated into CGD.",
-        "date": "Sept. 2020"
+        "description": "The new database is released.",
+        "date": "Mar. 2019"
       },
       {
-        "description": "The Castanea Genome Database (CGD) is up running.",
-        "date": "Aug. 2020"
+        "description": "The expression profiles of 120 wild and cultivated accessions have been load into SpinachBase.",
+        "date": "Feb. 2019"
+      },
+      {
+        "description": "Spinach genome and transcriptome diversity paper published.",
+        "date": "May. 2017"
+      },
+      {
+        "description": "The spinach genome sequence is made public.",
+        "date": "Feb. 2017"
       }
     ]
 }
+
   

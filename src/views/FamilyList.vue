@@ -184,7 +184,7 @@
 </template>
 <script setup>
 import { onMounted, ref, getCurrentInstance } from "vue";
-import { transcriptsData, chromData } from "../mockData/familyMockData";
+//import { transcriptsData, chromData } from "../mockData/familyMockData";
 import { useRoute, onBeforeRouteUpdate, useRouter } from "vue-router";
 import { BASE_URL } from "../utils/function";
 
@@ -213,7 +213,7 @@ var context3,
 const tableData = ref([]);
 let transcripts1 = ref([]);
 // const transcripts1 = ref(transcriptsData);
-const chrom1 = ref(chromData);
+// const chrom1 = ref(chromData);
 // var transcripts = transcripts1.value;
 // var chrom = chrom1.value;
 // console.log(transcriptsData);

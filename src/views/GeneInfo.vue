@@ -362,7 +362,6 @@
 </template>
 <script setup>
 import { ref, onMounted, reactive, getCurrentInstance } from "vue";
-import Blast from "../components/Blast.vue";
 import { useRoute, onBeforeRouteUpdate, useRouter } from "vue-router";
 const { proxy } = getCurrentInstance();
 
@@ -673,12 +672,12 @@ const goFamilyList = (v) => {
 </script>
 <style lang="less" scoped>
 .geneinfoWraper {
-    /deep/ .el-tabs--border-card {
+    :deep(.el-tabs--border-card) {
         border-left: 0;
         border-right: 0;
         border-bottom: 0;
     }
-    /deep/ .my-label {
+    :deep(.my-label) {
         margin-left: 20px !important;
         font-weight: bold;
         display: inline-block;
@@ -690,7 +689,7 @@ const goFamilyList = (v) => {
         background: var(--el-color-danger-light-9);
         width: 100px !important;
     }
-    /deep/ .el-descriptions__cell {
+    :deep(.el-descriptions__cell) {
         padding-bottom: 0 !important;
         display: flex;
     }

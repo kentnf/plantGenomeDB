@@ -11,46 +11,37 @@
                             src="@/assets/images/frontpage_01.jpg"
                             style="height: 350px"
                         />
-                        <h4><em>Castanea mollissima</em></h4>
+                        <h4><em>{{ siteConfig.fpImgName }}</em></h4>
                     </div>
                     <div class="col-md-7 rtejustify text-left">
-                        <span style="font-size: 16px">
-                            The CGD (Castanea Genomics Database) is a
-                            comprehensive platform for the most important
-                            ecological and economic value chestnut. Data
-                            available from CGD includes gene annotation, gene
-                            expression, genetic molecular markers, resource of
-                            comparative genomics. CGD also provided some useful
-                            genomic tools online.
+                        <span style="font-size: 16px" class="prompt">
+                            <i>The following content can be replaced by modifying the HomeView.vue file.</i>
                         </span>
                     </div>
                     <br />
-                    <br />
                     <div class="col-md-7 rtejustify text-left">
                         <span style="font-size: 16px">
-                            <em>Castanea</em>, a genus of Fagaceae family, is
-                            one of the important ecological and economic value
-                            plants, which seven <em>Castanea</em> species, can
-                            be found in East Asia (<em>C. mollissima</em>,
-                            <em>C. seguinii</em>, <em>C. henryi</em> and
-                            <em>C. crenata</em>), in North America (<em
-                                >C. dentata</em
-                            >
-                            and <em>C. pumila</em>), and in Europe (<em
-                                >C. sativa</em
-                            >). Chestnuts play an important role in nut
-                            production and forest ecosystem services. China has
-                            a long history for commercial nut production of
-                            Chinese chestnut and has higher biodiversity. The
-                            Chinese chestnut is widely cultivated in 26
-                            provinces in China, and the nut yield was 1,965,351
-                            tonnes, accounting for 83.50% of the world chestnut
-                            production, rank first worldwide in 2018. Due to
-                            excellent nutritional quality and natural resistance
-                            to pests and diseases, Chinese chestnut has been
-                            used in several breeding program resistance to
-                            <em>Cryphonectria parasitica</em> and
-                            <em>Phytophthora cinnamomic</em>.
+                            Spinach (Spinacia oleracea) is an economically important 
+                            green leafy vegetable that belongs to the Amaranthaceae 
+                            family in the order Caryophyllales. Spinach is native to 
+                            central Asia in Iran (Persia) and was introduced to China 
+                            around 600 A.D. before spreading to northern Europe 
+                            around 1100 A.D. through Spain. Today more than 60 countries 
+                            are cultivating spinach with China leading in spinach 
+                            production, accounting for more than 90% of the annual 
+                            worldwide gross production. Spinach is commonly used in 
+                            salads, as a cooked vegetable, or as an ingredient in fresh 
+                            or cooked meat and vegetable dishes. It is increasing in 
+                            popularity because of its enrichment in many essential 
+                            nutrients including carotenoids, folate, vitamin C, 
+                            calcium and iron. Despite its economic significance, the 
+                            genome resource of spinach currently is very limited. 
+                            Early in 2013, two groups of scientists from Shanghai Normal 
+                            University and Boyce Thompson Institute started to collected 
+                            valuable spinach resources worldwide and aimed to create 
+                            genome and transcriptome resources for spinach research and 
+                            improvement.
+
                         </span>
                     </div>
                 </div>
@@ -72,7 +63,7 @@
                         }"
                     >
                         <p class="news-text">
-                            <div v-html="item.description"></div> <b>[{{ item.date }}]</b>
+                            <div v-html="`${item.description} <b>[${item.date}]</b>`"></div>
                         </p>
                     </li>
                 </ul>

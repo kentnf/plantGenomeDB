@@ -1,6 +1,6 @@
 var VUE_APP_URL = 'http://47.95.117.10:8080'
 
 // replace the VUE_APP_GENOM_ID, desKey, and desIv for your new site
-var VUE_APP_GENOM_ID = 'M0LcDo3bQpWjcpiV3EUr5bExOWqzFmKuNNMUQ9rjB8/37u5aNNsMhIrPeV4UgcgwoBC5i4CGuOfX+0onMVYpaDvWVzyHiSX5'
-var desKey = 'ibMjDWP4'
-var desIv = 'u234IvrA'
+var VUE_APP_GENOM_ID = 'CUGYUsWsDk9KjbMGLFXd3j9CVU95U0pv7GxBEX31MeU='
+var desKey = 'FrWIuuCI'
+var desIv = 'KQ2bh35t'

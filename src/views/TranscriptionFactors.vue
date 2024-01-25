@@ -259,11 +259,11 @@ onMounted(() => {
 .genomeInfoWraper {
     width: 80vw;
     margin: 0 auto;
-    /deep/ .el-descriptions__cell {
+    :deep(.el-descriptions__cell) {
         padding-bottom: 0 !important;
         display: flex;
     }
-    /deep/ .my-label {
+    :deep(.my-label) {
         margin-left: 20px !important;
         font-weight: bold;
         display: inline-block;
@@ -275,7 +275,7 @@ onMounted(() => {
         background: var(--el-color-danger-light-9);
         width: 100px !important;
     }
-    /deep/ .el-tabs--border-card {
+    :deep(.el-tabs--border-card) {
         border-left: 0;
         border-right: 0;
         border-bottom: 0;

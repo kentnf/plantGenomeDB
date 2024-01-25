@@ -11,8 +11,6 @@
                             mode="horizontal"
                             :ellipsis="false"
                             @select="handleSelect"
-                            background-color="#767e85"
-                            text-color="#fff"
                             active-text-color="#ffd04b"
                         >
                         <el-menu-item index="1">
@@ -54,27 +52,27 @@
                         <el-sub-menu index="8"  popper-class="popperClass">
                             <template #title>Tools</template>
                             <el-menu-item index="8-1">
-                                <router-link to="/tools/blast" class="link">BLAST</router-link>
+                                <router-link to="/tools/blast" class="submenu-link">BLAST</router-link>
                             </el-menu-item>
                             <el-menu-item index="8-2">
-                                <router-link to="/tools/batchquery" class="link">Batch Query</router-link>
+                                <router-link to="/tools/batchquery" class="submenu-link">Batch Query</router-link>
                             </el-menu-item>
                             <el-menu-item index="8-3">
-                                <router-link to="/tools/go/enrich" class="link">GO Enrichment</router-link>
+                                <router-link to="/tools/go/enrich" class="submenu-link">GO Enrichment</router-link>
                             </el-menu-item>
                             <el-menu-item index="8-4">
-                                <router-link to="/tools/kegg/enrich" class="link">KEGG Enrichment</router-link>
+                                <router-link to="/tools/kegg/enrich" class="submenu-link">KEGG Enrichment</router-link>
                             </el-menu-item>
 
                             <el-menu-item index="8-6">
-                                <router-link to="/tools/synteny" class="link">Synteny Viewer</router-link>
+                                <router-link to="/tools/synteny" class="submenu-link">Synteny Viewer</router-link>
                             </el-menu-item>
                             <el-menu-item index="8-7">
-                                <router-link to="/tools/download" class="link">Download</router-link>
+                                <router-link to="/tools/download" class="submenu-link">Download</router-link>
                             </el-menu-item>
                         </el-sub-menu>
                         <el-menu-item index="9">
-                            <router-link to="/contact" class="link">Contact Us</router-link>
+                            <router-link to="/contact">Contact Us</router-link>
                         </el-menu-item>
                     </el-menu>
                     </div>
@@ -89,18 +87,7 @@
                 <hr />
                 <el-row class="center-row">
                     <el-col :span="12">
-                        <b>{{ siteConfig.siteName }}</b> is developed by
-                        <a
-                            href="https://zkxy.bua.edu.cn/info/1073/3587.htm"
-                            target="_blank"
-                            >Qin</a
-                        >
-                        &
-                        <a
-                            href="https://zkxy.bua.edu.cn/info/1073/3580.htm"
-                            target="_blank"
-                            >Xing Lab</a
-                        >, and
+                        <b>{{ siteConfig.siteName }}</b> is developed by <span v-html="labInfo"></span> and
                         <a href="http://lab.moilab.net" target="_blank"
                             >MOI Lab</a
                         >
@@ -161,6 +148,10 @@ import { useStore } from "vuex";
 import { inject } from 'vue';
 
 const siteConfig = inject('siteConfig');
+
+let labInfo = siteConfig.labs.map(lab => {
+    return `<a href="${lab.url}" target="_blank">${lab.name}</a>`;
+}).join(', ');
 
 const { proxy } = getCurrentInstance();
 
@@ -262,17 +253,18 @@ const openOutLink = (res) => {
   align-items: center;
 }
 
-.link {
-  color: #fff; /* 链接颜色 */
+.submenu-link {
+  color: #000; /* 链接颜色 */
   text-decoration: none; /* 去掉下划线 */
 }
+
 
 .common-layout {
     .Header {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        background: #825b2f;
+        background: var(--primary-color);
         .el-menu--horizontal {
             border: none;
         }
@@ -281,24 +273,25 @@ const openOutLink = (res) => {
         min-height: calc(100vh - 215px);
     }
     .popperClass {
-        background: #fff;
+        background: var(--secondary-color);
     }
     .el-menu--horizontal {
         background: none;
     }
-
+    /* el-menu-item is for menu without sub-menu */
     .el-menu-item {
-        background: none;
-        // color: red !important;
+        color: #fff !important;
         background: none !important;
     }
-    /deep/ .el-menu--horizontal .el-sub-menu .el-sub-menu__title {
+    /* below is for menu with sub-menu */
+    :deep(.el-menu--horizontal .el-sub-menu .el-sub-menu__title) {
         background: none !important;
         color: #fff !important;
     }
-    /deep/ .el-menu--horizontal .el-sub-menu .el-sub-menu__title:hover {
+    /* below is for menu with sub-menu when mouse over */
+    :deep(.el-menu--horizontal .el-sub-menu .el-sub-menu__title:hover) {
         background: #fff !important;
-        color: #825b2f !important;
+        color: var(--primary-color) !important;
     }
     .footer {
         background: #fff;
@@ -308,7 +301,7 @@ const openOutLink = (res) => {
         font-size: 20px;
     }
 }
-body /deep/ .popperClass {
+body :deep(.popperClass) {
     .el-menu--popup {
         background: var(--el-color-black);
     }

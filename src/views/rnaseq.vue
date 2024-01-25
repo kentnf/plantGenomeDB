@@ -15,15 +15,23 @@
             <hr />
         </el-col>
         <el-col :span="24">
-            <h3>Browse RNA-Seq data through JBrowse</h3>
-            <p><a href="/jbrowse/?data=data/json/6041901&tracks=DNA,genes&" target="_blank">
-                Reference genome: Castanea mollissima cv. HBY-2 [Chinese chestnut ]</a></p>
-            <p><a href="/jbrowse/?data=data/json/6041904&tracks=DNA,genes&" target="_blank">
-                Reference genome: Castanea mollissima cv. Vanuxem [Chinese chestnut (Vanuxem)]</a></p>
-            <p><a href="/jbrowse/?data=data/json/6041903&tracks=DNA,genes&" target="_blank">
-                Reference genome: Castanea mollissima cv. Sun [Chinese chestnut (Sun)]</a></p>
-            <p><a href="/jbrowse/?data=data/json/6041902&tracks=DNA,genes&" target="_blank">
-                Reference genome: Castanea mollissima cv. N11-1 [Chinese chestnut (N11-1)]</a></p>
+            <h3>Browse variants data through JBrowse</h3>
+            <p>Example for setting reference genome in main.js</p>
+            <p><a :href="`/jbrowse/?data=data/json/${siteConfig.searchExampleID}&tracks=DNA,genes&`" target="_blank">
+                Rference genome: {{ siteConfig.searchExampleGenome }}</a></p>
+            <br>
+
+            <p>Example for modifying templete file</p>
+            <p><a href="/jbrowse/?data=data/json/356202&tracks=DNA,genes&" target="_blank">
+                Reference genome: Spinacia oleracea cv. Viroflay [spinach (Viroflay)]</a></p>
+            <br>
+
+            <p>Example for using all genomes as refernce</p>
+            <p v-for="(item, index) in genomesList" :key="index">
+                <a :href="`/jbrowse/?data=data/json/${item.id}&tracks=DNA,genes&`" target="_blank">
+                    Reference genome: {{ item.sname }} [{{ item.cname }}]
+                </a>
+            </p>
             <hr />
         </el-col>
         <el-col :span="24">
@@ -35,6 +43,11 @@
     </div>
 </template>
 <script setup>
+import { useStore } from "vuex";
+const store = useStore();
+const genomesList = store.state.navconfigData;
+import { inject } from 'vue';
+const siteConfig = inject('siteConfig');
 </script>
 <style lang="less" scoped>
 </style>

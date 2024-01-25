@@ -574,11 +574,11 @@ onMounted(() => {
 .genomeInfoWraper {
     width: 80vw;
     margin: 0 auto;
-    /deep/ .el-descriptions__cell {
+    :deep(.el-descriptions__cell) {
         padding-bottom: 0 !important;
         display: flex;
     }
-    /deep/ .my-label {
+    :deep(.my-label) {
         margin-left: 20px !important;
         font-weight: bold;
         display: inline-block;

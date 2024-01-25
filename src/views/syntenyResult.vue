@@ -325,10 +325,10 @@ onMounted(() => {
 });
 </script>
 <style lang="less" scoped>
-/deep/ .el-table .warning-row {
+:deep(.el-table .warning-row) {
     background: #ffffff;
 }
-/deep/ .el-table .success-row {
+:deep(.el-table .success-row) {
     // --el-table-tr-bg-color: var(--el-color-success-light-9);
     background: #f3e5d4 !important;
 }

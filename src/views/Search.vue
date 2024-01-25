@@ -31,12 +31,12 @@
         </div>
         <div class="keyword-links">
             Examples: 
-            <a href="#" @click.prevent="setKeyword('Cm11G02100.gene', 6041901)">Cm11G02100.gene</a>, 
-            <a href="#" @click.prevent="setKeyword('Ethylene-insensitive protein 2', 6041901)">Ethylene-insensitive protein 2</a>, 
-            <a href="#" @click.prevent="setKeyword('GO:0000160', 6041901)">GO:0000160</a>, 
-            <a href="#" @click.prevent="setKeyword('IPR001046', 6041901)">IPR001046</a>, 
-            <a href="#" @click.prevent="setKeyword('WRKY', 6041901)">WRKY</a>, 
-            <a href="#" @click.prevent="setKeyword('ETR2', 6041901)">ETR2</a>
+            <a href="#" @click.prevent="setKeyword(siteConfig.searchExampleGene, siteConfig.searchExampleID)">{{ siteConfig.searchExampleGene }}</a>, 
+            <a href="#" @click.prevent="setKeyword('Ethylene-insensitive protein 2', siteConfig.searchExampleID)">Ethylene-insensitive protein 2</a>, 
+            <a href="#" @click.prevent="setKeyword('GO:0000160', siteConfig.searchExampleID)">GO:0000160</a>, 
+            <a href="#" @click.prevent="setKeyword('IPR001046',siteConfig.searchExampleID)">IPR001046</a>, 
+            <a href="#" @click.prevent="setKeyword('WRKY', siteConfig.searchExampleID)">WRKY</a>, 
+            <a href="#" @click.prevent="setKeyword('ETR2', siteConfig.searchExampleID)">ETR2</a>
         </div>
 
         <div v-if="tableData.length > 0">
@@ -131,6 +131,10 @@ const router = useRouter();
 import { useStore } from "vuex";
 const store = useStore();
 const { proxy } = getCurrentInstance();
+
+import { inject } from 'vue';
+const siteConfig = inject('siteConfig');
+
 
 const genomeId = ref('');
 const searchKey = ref([]);
@@ -256,7 +260,7 @@ const cellClick = (res) => {
 .select-box {
   width:300px;
 }
-::v-deep .el-autocomplete .el-input__inner {
+:deep(.el-autocomplete .el-input__inner) {
     width: 600px;
 }
 .search-button {

@@ -68,7 +68,7 @@
                     <div class="panel-footer">
                         <center>
                             <el-button
-                                style="background-color:#825b2f; border: none;" 
+                                class="submit-button" 
                                 type="primary"
                                 @click="Submit"
                                 :loading="submitLoading"
